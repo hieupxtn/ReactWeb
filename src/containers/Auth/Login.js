@@ -27,7 +27,11 @@ class Login extends Component {
     handleLogin = async () =>{
         console.log('username: ' + this.state.username, 'password: ' +this.state.password)
         console.log('all state: ', this.state)
-        await handleLoginApi(this.state.username, this.state.password);
+        try {
+            await handleLoginApi(this.state.username, this.state.password);
+        } catch (e) {   
+            console.log(e)
+        }
     }
     render() {
         return (

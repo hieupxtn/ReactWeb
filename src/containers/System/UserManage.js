@@ -41,29 +41,25 @@ class UserManage extends Component {
                             <th>Address</th>
                             <th>Actions</th>
                         </tr>
-                        <tr>
+                        
                             {
                                 arrUsers && arrUsers.map((item, index) => {
                                     console.log('check map', item, index)
-                                    return(
-                                        <div className='divClass'>
+                                    return(        
+                                        <tr>
                                             <td>{item.email}</td>
                                             <td>{item.firstName}</td>
                                             <td>{item.lastName}</td>
                                             <td>{item.address}</td>
-                                        </div>
+                                            <td>
+                                                <button className='btn-edit'>Edit</button>
+                                                <button className='btn-delete'>Delete</button>
+                                            </td>
+                                        </tr>
                                     )
                                 })
                             }
-                            
-                        </tr> 
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>  
+                         
                     </table>
                 </div>
             </div>

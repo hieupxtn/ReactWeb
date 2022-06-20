@@ -5,7 +5,7 @@ const handleLoginApi = (userEmail, userPassword) => {
 }
 
 const getAllUsers = (inputId) => {
-    return axios.get(`/api/get-all-user?id=${inputId}`, {id: inputId})
+    return axios.get(`/api/get-all-users?id=${inputId}`, {id: inputId})
 }
 
 export { handleLoginApi, getAllUsers };
